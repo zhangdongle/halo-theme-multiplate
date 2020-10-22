@@ -11,12 +11,12 @@
 
 # 详情请参考：https://halo.run/develop/theme.html#theme-yaml
 
-id: ruibaby_quickstarter
-name: QuickStarter
+id: zhangdongle_multiplate
+name: 多板块首页
 author:
-  name: Ryan Wang
-  website: https://ryanc.cc
-description: Quick starter theme for halo
+  name: zhangdongle
+  website: 
+description: 一款首页多板块布局的halo主题
 logo:
 website: https://github.com/halo-dev/halo-theme-quick-starter
 repo: https://github.com/halo-dev/halo-theme-quick-starter
