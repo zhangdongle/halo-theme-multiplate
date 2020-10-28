@@ -38,9 +38,6 @@
         body > .section {
             opacity: 0
         }
-        video{
-          width:295px;height:166px;
-        }
     </style>
     
     <link rel="stylesheet"
@@ -135,20 +132,31 @@
             <section class="section-wrap pt-50 bg-dark" style="text-align:center;">
               <div class="container">
                 <div class="row">
-                  <div class="col-lg-4 video-col--small">
+                  <div class="col-lg-4">
                     <article class="entry">
-                      <video src="${theme_base!}/source/images/比特币重塑未来.mp4" controls="controls">
-                        您的浏览器不支持 video 标签。
-                      </video>
-                      <a href="#" class="entry__meta-category"><@spring.message code="index.video1"/></a>
+                      <div class="row text-center">
+                        <video src="${theme_base!}/source/images/比特币重塑未来.mp4" controls="controls">
+                          您的浏览器不支持 video 标签。
+                        </video>
+                      </div>
+                      <div class="row text-center" style="text-align:center;">
+                        <span style="color:#FFFFFF;width:100%">
+                          <@spring.message code="index.video1"/>
+                        </span>
+                      </div>
                     </article>
+                    
                   </div>
                   <div class="col-lg-4 video-col--small">
                     <article class="entry">
                       <video src="${theme_base!}/source/images/区块链和去中心化最清晰的解释!.mp4" controls="controls">
                         您的浏览器不支持 video 标签。
                       </video>
-                      <a href="#" class="entry__meta-category"><@spring.message code="index.video2"/>区块链和去中心化最清晰的解释</a>
+                      <div class="row text-center" style="text-align:center;">
+                        <span style="color:#FFFFFF;width:100%">
+                          <@spring.message code="index.video2"/>
+                        </span>
+                      </div>
                     </article>
                   </div>
                   <div class="col-lg-4 video-col--small">
@@ -156,18 +164,26 @@
                       <video src="${theme_base!}/source/images/三分钟了解以太坊和智能合约.mp4" controls="controls">
                         您的浏览器不支持 video 标签。
                       </video>
-                      <a href="#" class="entry__meta-category"><@spring.message code="index.video3"/>三分钟了解以太坊和智能合约</a>
+                      <div class="row text-center" style="text-align:center;">
+                        <span style="color:#FFFFFF;width:100%">
+                          <@spring.message code="index.video3"/>
+                        </span>
+                      </div>
                     </article>
                   </div>
                   
                 </div>
                 <div class="row">
-                  <div class="col-lg-4 video-col--small">
+                  <div class="col-lg-4">
                     <article class="entry">
                       <video src="${theme_base!}/source/images/什么是区块链.mp4" controls="controls">
                         您的浏览器不支持 video 标签。
                       </video>
-                      <a href="#" class="entry__meta-category"><@spring.message code="index.video4"/>什么是区块链</a>
+                      <div class="row text-center" style="text-align:center;">
+                        <span style="color:#FFFFFF;width:100%">
+                          <@spring.message code="index.video4"/>
+                        </span>
+                      </div>
                     </article>
                   </div>
                   <div class="col-lg-4 video-col--small">
@@ -176,7 +192,11 @@
                       <video src="${theme_base!}/source/images/智能合约在区块链上的应用_.mp4" controls="controls">
                         您的浏览器不支持 video 标签。
                       </video>
-                      <a href="#" class="entry__meta-category"><@spring.message code="index.video5"/></a>
+                      <div class="row text-center" style="text-align:center;">
+                        <span style="color:#FFFFFF;width:100%">
+                          <@spring.message code="index.video5"/>
+                        </span>
+                      </div>
                     </article>
                   </div>
                 </div>

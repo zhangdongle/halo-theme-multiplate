@@ -87,7 +87,7 @@
     <div class="" style="margin-left:20px;">
         <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
             <a class="dropdown-item" href="/locale/en_US">English</a>
-            <a class="dropdown-item" href="/locale/zh_CN">简体中文</a>
+            <#--  <a class="dropdown-item" href="/locale/zh_CN">简体中文</a>  -->
             <a class="dropdown-item" href="/locale/zh_TW">中文繁体</a>
         </div>
     </div>
