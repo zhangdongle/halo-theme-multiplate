@@ -151,7 +151,7 @@ img{
             </div>
             <!-- Search -->
             <div class="nav__mobile-search d-lg-none">
-                <a href="#" class="nav__search-trigger"><i class="ui-search nav__search-trigger-icon"></i></a>
+                <#--  <a href="#" class="nav__search-trigger"><i class="ui-search nav__search-trigger-icon"></i></a>  -->
             </div>
             <!-- Search form -->
             <#--  <form role="search" method="get" class="nav__search-form d-lg-none">

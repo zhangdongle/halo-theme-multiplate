@@ -244,6 +244,16 @@
             </div>
         </main>
 </div>
+<!-- jQuery Scripts -->
+  <script src="${theme_base!}/source/js/jquery.min.js"></script>
+  <script src="${theme_base!}/source/js/bootstrap.min.js"></script>
+  <script src="${theme_base!}/source/js/easing.min.js"></script>
+  <script src="${theme_base!}/source/js/jquery.marquee.min.js"></script>
+  <script src="${theme_base!}/source/js/imagesloaded.pkgd.min.js"></script>
+  <script src="${theme_base!}/source/js/isotope.pkgd.min.js"></script>
+  <script src="${theme_base!}/source/js/owl-carousel.min.js"></script>
+  <script src="${theme_base!}/source/js/modernizr.min.js"></script>
+  <script src="${theme_base!}/source/js/scripts.js"></script>
 <#include "layout/common/scripts.ftl">
 <#--  <#include "search/local.ftl">  -->
 </body>
