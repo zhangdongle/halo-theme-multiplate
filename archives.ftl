@@ -1,19 +1,57 @@
-<#include "module/macro.ftl">
-<@layout title="${options.blog_title!} | 归档" keywords="${options.seo_keywords!}" description="${options.seo_description!}">
-    <h1>归档</h1>
-    <ul>
-        <#--
-            详情请参考：https://halo.run/develop/theme.html#%E6%A0%B9%E6%8D%AE%E5%B9%B4%E4%BB%BD%E5%BD%92%E6%A1%A3
-         -->
-        <@postTag method="archiveYear">
-            <#list archives as archive>
-                <li>
-                <h2>${archive.year?c}</h2>
-                <#list archive.posts?sort_by("createTime")?reverse as post>
-                    <a href="${context!}/archives/${post.url!}">${post.title!}</a>
+<#include "layout/layout.ftl">
+<#include "layout/common/article.ftl">
+<@layout title="归档 - ${blog_title!}" canonical="${archives_url!}">
+<#list archives as archive>
+    <div class="card widget">
+        <div class="card-content">
+            <h3 class="tag is-link">
+                ${archive.year?c}
+            </h3>
+            <div class="timeline">
+                <#list archive.posts as post>
+                    <article class="media">
+                        <#if post.thumbnail?? && post.thumbnail!=''>
+                            <a href="${post.thumbnail}" class="media-left">
+                                <p class="image is-64x64">
+                                    <img class="thumbnail" src="${post.fullPath!}" alt="${post.title!}">
+                                </p>
+                            </a>
+                        </#if>
+                        <div class="media-content">
+                            <div class="content">
+                                <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="${post.createTime!}">${post.createTime?string["EEE MMM d"]}</time>
+                                <a href="${post.fullPath!}" class="title has-link-black-ter is-size-6 has-text-weight-normal">${post.title!}</a>
+                            </div>
+                        </div>
+                    </article>
                 </#list>
-                </li>
-            </#list>
-        </@postTag>
-    </ul>
+            </div>
+        </div>
+    </div>
+</#list>
+<#if posts.getTotalPages() gt 0>
+    <div class="card card-transparent">
+        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+            <@paginationTag method="archives" page="${posts.number}" total="${posts.totalPages}" display="3">
+                <div class="pagination-previous<#if pagination.hasPrev><#else > is-invisible is-hidden-mobile</#if>">
+                    <a class="is-flex-grow has-text-black-ter" href="${pagination.prevPageFullPath!}">
+                        <@spring.message code="prepage"/>
+                    </a>
+                </div>
+                <div class="pagination-next<#if pagination.hasNext><#else > is-invisible is-hidden-mobile</#if>">
+                    <a class="is-flex-grow has-text-black-ter" href="${pagination.nextPageFullPath!}"><@spring.message code="nextpage"/></a>
+                </div>
+                <ul class="pagination-list is-hidden-mobile">
+                    <#list pagination.rainbowPages as number>
+                        <#if number.isCurrent>
+                            <li><a class="pagination-link is-current" href="${number.fullPath!}">${number.page!}</a></li>
+                        <#else>
+                            <li><a class="pagination-link has-text-black-ter" href="${number.fullPath!}">${number.page!}</a></li>
+                        </#if>
+                    </#list>
+                </ul>
+            </@paginationTag>
+        </nav>
+    </div>
+</#if>
 </@layout>

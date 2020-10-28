@@ -1,8 +1,6 @@
-<#include "module/macro.ftl">
-<@layout title="${options.blog_title!} | ${post.title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}">
-    <h1>${post.title!}</h1>
-    ${post.formatContent!}
+<#include "layout/layout.ftl">
+<#include "layout/common/article.ftl">
 
-    <#include "module/comment.ftl">
-    <@comment post=post type="post" />
+<@layout title="${post.title!} - ${blog_title!}" canonical="${post.fullPath!}">
+    <@article post,'page',"post",false />
 </@layout>
